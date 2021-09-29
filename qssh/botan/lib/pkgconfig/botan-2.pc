@@ -1,0 +1,13 @@
+prefix=/mingw
+exec_prefix=${prefix}
+libdir=/mingw\lib
+includedir=${prefix}/include/botan-2
+
+Name: Botan
+Description: Crypto and TLS for C++11
+Version: 2.18.1
+
+Libs: -L${libdir} -lbotan-2 -m32 -pthread
+Libs.private: -lcrypt32 -lws2_32
+Cflags: -I${includedir}
+
